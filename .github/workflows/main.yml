@@ -1,0 +1,23 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Встановлення Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+        
+    - name: Встановлення залежностей
+      run: npm install
+      
+    - name: Запуск тестів (перевірка)
+      run: npm test
