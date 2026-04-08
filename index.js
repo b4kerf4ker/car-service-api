@@ -6,8 +6,8 @@ app.use(express.json());
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'root', // Твій юзер бази (зазвичай root)
-    password: '', // Твій пароль (якщо є)
+    user: 'root', 
+    password: '', 
     database: 'car_service'
 });
 
